@@ -1,11 +1,11 @@
 import { Bug } from '../models/Bug';
 
 export class BugOperationsService{
-	createNew(bugName : string) : Bug{
+	createNew(bugName : string, isClosed : boolean = false, createdAt : Date = new Date()) : Bug{
 		let newBug : Bug = {
 			name : bugName,
-			isClosed : false,
-			createdAt : new Date()
+			isClosed : isClosed,
+			createdAt : createdAt
 		};
 		return newBug;
 	}
