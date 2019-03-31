@@ -10,6 +10,9 @@ import { BugOperationsService } from './services/bugOperations.service';
 export class BugTrackerComponent{
 	bugs : Bug[] = [];
 
+	sortAttrName : string = 'name';
+	sortDesc : boolean = false;
+	
 	constructor(private bugOperations : BugOperationsService){
 
 	}
