@@ -10,6 +10,7 @@ import { Bug } from '../models/Bug';
 			<label for="">Bug Name :</label>
 			<input type="text" #txtBugName>
 			<input type="button" value="Add New" (click)="onAddNewClick(txtBugName.value)">
+			<input type="button" value="Set Dummy Data" (click)="onSetDummyDataClick()" />
 		</section>
 	`,
 })
@@ -20,6 +21,10 @@ export class BugEditComponent{
 
 	constructor(private bugOperations : BugOperationsService){
 
+	}
+
+	onSetDummyDataClick(){
+		this.bugOperations.dummyData = 'A dummy data from bugEdit component';
 	}
 	onAddNewClick(bugName : string){
 		this.bugOperations

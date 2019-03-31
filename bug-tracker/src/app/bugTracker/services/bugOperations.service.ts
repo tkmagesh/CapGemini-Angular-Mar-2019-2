@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class BugOperationsService{
 
+	public dummyData : string = '';
+	
 	constructor(private bugApi : BugApiService){
 
 	}
